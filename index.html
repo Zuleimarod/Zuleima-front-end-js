@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tienda online de tecnología: productos, reseñas y contacto.">
+  <title>TechStore | Pre-Entrega Front-End</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- CSS externo -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="header">
+    <h1 class="logo">Tech<span>Store</span></h1>
+    <nav class="nav" aria-label="Navegación principal">
+      <ul class="nav__list">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#resenas">Reseñas</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Sección Inicio / Hero (usa background con degradado) -->
+    <section id="inicio" class="hero">
+      <h2>La mejor tecnología, al mejor precio</h2>
+      <p>Descubrí nuestros productos, leé las opiniones de otros clientes y contactanos.</p>
+      <a href="#productos" class="btn">Ver productos</a>
+    </section>
+
+    <!-- Sección Productos: cards con Flexbox -->
+    <section id="productos" class="section">
+      <h2 class="section__title">Productos</h2>
+      <div class="cards">
+        <article class="card">
+          <div class="card__img card__img--1" role="img" aria-label="Notebook"></div>
+          <h3>Notebook Pro 15"</h3>
+          <p>Procesador de última generación, 16 GB de RAM y SSD de 512 GB.</p>
+          <span class="card__price">$ 850.000</span>
+        </article>
+        <article class="card">
+          <div class="card__img card__img--2" role="img" aria-label="Auriculares"></div>
+          <h3>Auriculares Bluetooth</h3>
+          <p>Cancelación de ruido y hasta 30 horas de batería.</p>
+          <span class="card__price">$ 95.000</span>
+        </article>
+        <article class="card">
+          <div class="card__img card__img--3" role="img" aria-label="Smartwatch"></div>
+          <h3>Smartwatch Fit</h3>
+          <p>Monitor cardíaco, GPS y resistencia al agua.</p>
+          <span class="card__price">$ 120.000</span>
+        </article>
+        <article class="card">
+          <div class="card__img card__img--4" role="img" aria-label="Teclado"></div>
+          <h3>Teclado Mecánico</h3>
+          <p>Switches rojos, retroiluminación RGB y diseño compacto.</p>
+          <span class="card__price">$ 70.000</span>
+        </article>
+      </div>
+    </section>
+
+    <!-- Sección Reseñas: Grid -->
+    <section id="resenas" class="section section--alt">
+      <h2 class="section__title">Reseñas</h2>
+      <div class="reviews">
+        <blockquote class="review">
+          <p>“Excelente atención y el envío llegó en tiempo récord.”</p>
+          <footer>— Lucía M. ★★★★★</footer>
+        </blockquote>
+        <blockquote class="review">
+          <p>“La notebook superó mis expectativas, súper recomendable.”</p>
+          <footer>— Carlos R. ★★★★★</footer>
+        </blockquote>
+        <blockquote class="review">
+          <p>“Muy buena calidad de sonido en los auriculares.”</p>
+          <footer>— Ana P. ★★★★☆</footer>
+        </blockquote>
+        <blockquote class="review">
+          <p>“Buen precio y producto tal cual la descripción.”</p>
+          <footer>— Martín G. ★★★★☆</footer>
+        </blockquote>
+        <blockquote class="review">
+          <p>“Me ayudaron a elegir el mejor smartwatch para mí.”</p>
+          <footer>— Sofía L. ★★★★★</footer>
+        </blockquote>
+        <blockquote class="review">
+          <p>“Volvería a comprar sin dudarlo.”</p>
+          <footer>— Julián T. ★★★★★</footer>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- Sección Contacto: formulario con Formspree + Media Queries -->
+    <section id="contacto" class="section contacto">
+      <h2 class="section__title">Contacto</h2>
+      <!-- IMPORTANTE: reemplazá TU_ID por el ID de tu formulario en formspree.io -->
+      <form class="form" action="https://formspree.io/f/TU_ID" method="POST">
+        <div class="form__group">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+        </div>
+        <div class="form__group">
+          <label for="email">Correo electrónico</label>
+          <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" required>
+        </div>
+        <div class="form__group form__group--full">
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribí tu mensaje..." required></textarea>
+        </div>
+        <button type="submit" class="btn form__btn">Enviar mensaje</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 TechStore. Todos los derechos reservados.</p>
+    <p>Proyecto Pre-Entrega · Front-End</p>
+  </footer>
+
+</body>
+</html>
